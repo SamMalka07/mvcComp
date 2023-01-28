@@ -25,3 +25,13 @@ C:\Talent-Competition\Talent\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common
 C:\Talent-Competition\Talent\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.AssemblyInfo.cs
 C:\Talent-Competition\Talent\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.dll
 C:\Talent-Competition\Talent\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.pdb
+D:\study\mvcomp\Talent.Common\bin\Debug\netcoreapp2.0\Talent.Common.deps.json
+D:\study\mvcomp\Talent.Common\bin\Debug\netcoreapp2.0\Talent.Common.dll
+D:\study\mvcomp\Talent.Common\bin\Debug\netcoreapp2.0\Talent.Common.pdb
+D:\study\mvcomp\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.csproj.AssemblyReference.cache
+D:\study\mvcomp\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\study\mvcomp\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.AssemblyInfoInputs.cache
+D:\study\mvcomp\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.AssemblyInfo.cs
+D:\study\mvcomp\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.csproj.CoreCompileInputs.cache
+D:\study\mvcomp\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.dll
+D:\study\mvcomp\Talent.Common\obj\Debug\netcoreapp2.0\Talent.Common.pdb

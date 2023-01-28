@@ -19,7 +19,8 @@ export default class EmployeeProfile extends React.Component {
                 skills: []
             },
             formErrors: { name: '', email: '' },
-            nameValid: false,
+            firstNameValid: false,
+            lastNameValid:false,
             emailValid: false,
             formValid: true,
             loaderData: loaderData
@@ -43,6 +44,7 @@ export default class EmployeeProfile extends React.Component {
         loaderData.allowedUsers.push("Recruiter");
         loaderData.isLoading = false;
         this.setState({ loaderData, })
+        
     }
 
     componentDidMount() {
@@ -61,6 +63,7 @@ export default class EmployeeProfile extends React.Component {
             contentType: "application/json",
             dataType: "json",
             success: function (res) {
+                console.log(res);
                 let employerData = null;
                 if (res.employer) {
                     employerData = res.employer
@@ -117,7 +120,8 @@ export default class EmployeeProfile extends React.Component {
 
         let fieldValidationErrors = this.state.formErrors;
         let emailValid = this.state.emailValid;
-        let nameValid = this.state.nameValid;
+        let firstNameValid = this.state.firstNameValid;
+        let lastNameValid = this.state.lastNameValid;
         var formValid = this.state.formValid;
         switch (fieldName) {
             case 'email':
@@ -126,17 +130,19 @@ export default class EmployeeProfile extends React.Component {
                 formValid = emailValid != null;
                 break;
             case 'name':
-                nameValid = value.match('\w');
-                fieldValidationErrors.nameValid = nameValid ? '' : ' is invalid';
-                formValid = nameValid;
+                firstNameValid = value.match('\w');
+                fieldValidationErrors.firstNameValid = firstNameValid ? '' : ' is invalid';
+                formValid = firstNameValid;
                 break;
+
             default:
                 break;
         }
         this.setState({
             formErrors: fieldValidationErrors,
             emailValid: emailValid,
-            nameValid: nameValid,
+            firstNameValid: firstNameValid,
+            lastNameValid:lastNameValid,
             formValid: formValid
         }, this.validateForm);
     }

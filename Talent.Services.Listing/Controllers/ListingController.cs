@@ -60,7 +60,7 @@ namespace Talent.Services.Listing.Controllers
                     jobData.Status = JobStatus.Active;
                     jobData.CreatedOn = DateTime.UtcNow;
                     string newJobID = _jobService.CreateJob(jobData);
-                    message = "Job added successfully with id " + newJobID;
+                    message = "Job added successfully with id " + newJobID + "empID is "+ jobData.EmployerID;
                 }
                 else
                 {
@@ -167,17 +167,19 @@ namespace Talent.Services.Listing.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "employer, recruiter")]
         public async Task<IActionResult> GetSortedEmployerJobs(int activePage, string sortbyDate, bool showActive, bool showClosed, bool showDraft, bool showExpired, bool showUnexpired, string employerId = null, int limit = 6)
         {
-            try
+            try 
             {
                 employerId = employerId == null ? _userAppContext.CurrentUserId : employerId;
                 var sortedJobs = (await _jobService.GetEmployerJobsAsync(employerId));
+
+                //return Json(new {activePage, sortbyDate, showActive, showClosed , showDraft , showExpired, showUnexpired });
 
                 if (!showActive)
                 {
                     sortedJobs = sortedJobs.Where(x => x.Status != JobStatus.Active);
                 }
 
-                if(!showClosed)
+                if (!showClosed)
                 {
                     sortedJobs = sortedJobs.Where(x => x.Status != JobStatus.Closed);
                 }

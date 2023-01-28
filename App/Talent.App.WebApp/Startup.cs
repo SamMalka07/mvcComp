@@ -47,6 +47,7 @@ namespace Talent.App.WebApp
                     new { controller = "Home", action = "index" }
                 );
             });
+
         }
     }
 }
